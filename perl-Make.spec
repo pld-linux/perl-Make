@@ -9,8 +9,8 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Make/Make-%{version}.tar.gz
 # Source0-md5:	ee5233f89630451dd2c24e5e0d7d3336
 Patch0:		%{name}-pmake.patch
-BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-devel >= 5.6
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,7 +32,8 @@ perl -I. pmake.pl
 %install
 rm -rf $RPM_BUILD_ROOT
 
-perl -Mblib pmake.pl install DESTDIR=$RPM_BUILD_ROOT
+perl -Mblib pmake.pl install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
