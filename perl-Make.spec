@@ -3,7 +3,7 @@ Summary:	Make perl module
 Summary(pl):	Modu³ perla Make
 Name:		perl-Make
 Version:	1.00
-Release:	5
+Release:	6
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
