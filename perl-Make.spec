@@ -1,14 +1,17 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
-Summary:	Make perl module
-Summary(pl):	Modu³ perla Make
+Summary:	Make - module for processing makefiles
+Summary(pl):	Make - modu³ do przetwarzania plików Makefile
 Name:		perl-Make
 Version:	1.00
-Release:	9
-License:	GPL
+Release:	10
+License:	same as perl (GPL or Artistic)
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Make/Make-%{version}.tar.gz
 # Source0-md5:	ee5233f89630451dd2c24e5e0d7d3336
-Patch0:		%{name}-pmake.patch
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
@@ -22,17 +25,19 @@ Make - modu³ do przetwarzania plików Makefile.
 
 %prep
 %setup -q -n Make-%{version}
-%patch -p1
+mv pmake pmake.pl
+%{__perl} -pi -e '/EXE_FILES/ && s/pmake/pmake.pl/' Makefile.PL
 
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-perl -I. pmake.pl
+
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-perl -Mblib pmake.pl install \
+%{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
@@ -41,6 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%attr(755,root,root) %{_bindir}/pmake.pl
-%{perl_vendorlib}/Make.pm
-%{_mandir}/man[13]/*
+%attr(755,root,root) %{_bindir}/*
+%{perl_vendorlib}/*.pm
+%{_mandir}/man1/*
+%{_mandir}/man3/M*
