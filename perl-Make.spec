@@ -8,7 +8,8 @@ Summary(pl):	Make - modu³ do przetwarzania plików Makefile
 Name:		perl-Make
 Version:	1.00
 Release:	10
-License:	same as perl (GPL or Artistic)
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Make/Make-%{version}.tar.gz
 # Source0-md5:	ee5233f89630451dd2c24e5e0d7d3336
