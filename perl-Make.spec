@@ -7,6 +7,7 @@ Release:	9
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Make/Make-%{version}.tar.gz
+# Source0-md5:	ee5233f89630451dd2c24e5e0d7d3336
 Patch0:		%{name}-pmake.patch
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-devel >= 5.6
