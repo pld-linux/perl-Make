@@ -32,14 +32,12 @@ rm -rf $RPM_BUILD_ROOT
 
 perl -Mblib pmake.pl install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf Changes README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Changes README
 %attr(755,root,root) %{_bindir}/pmake.pl
 %{perl_sitelib}/Make.pm
 %{_mandir}/man[13]/*
