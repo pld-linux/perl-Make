@@ -4,11 +4,11 @@ Summary(pl):	Modu³ perla Make
 Name:		perl-Make
 Version:	1.00
 Release:	4
-Copyright:	GPL
+License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Make/Make-%{version}.tar.gz
-Patch:		perl-Make-pmake.patch
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Make/Make-%{version}.tar.gz
+Patch0:		perl-Make-pmake.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRequires:	perl >= 5.005_03-14
 %requires_eq	perl
@@ -16,7 +16,7 @@ Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Make - module for processing makefiles. 
+Make - module for processing makefiles.
 
 %description -l pl
 Make - modu³ do przetwarzania plików Makefile.
