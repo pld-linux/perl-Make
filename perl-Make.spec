@@ -3,7 +3,7 @@ Summary:	Make perl module
 Summary(pl):	Modu³ perla Make
 Name:		perl-Make
 Version:	1.00
-Release:	8
+Release:	9
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Make/Make-%{version}.tar.gz
