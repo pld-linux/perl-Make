@@ -26,7 +26,7 @@ Make - modu³ do przetwarzania plików Makefile.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 perl -I. pmake.pl
 
 %install
