@@ -24,7 +24,7 @@ Make - modu³ do przetwarzania plików Makefile.
 %patch -p1
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 perl -I. pmake.pl
 
 %install
