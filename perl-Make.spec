@@ -4,7 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	Make - module for processing makefiles
-Summary(pl):	Make - modu≥ do przetwarzania plikÛw Makefile
+Summary(pl.UTF-8):   Make - modu≈Ç do przetwarzania plik√≥w Makefile
 Name:		perl-Make
 Version:	1.00
 Release:	10
@@ -21,8 +21,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Make - module for processing makefiles.
 
-%description -l pl
-Make - modu≥ do przetwarzania plikÛw Makefile.
+%description -l pl.UTF-8
+Make - modu≈Ç do przetwarzania plik√≥w Makefile.
 
 %prep
 %setup -q -n Make-%{version}
