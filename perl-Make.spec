@@ -4,7 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	Make - module for processing makefiles
-Summary(pl.UTF-8):   Make - moduł do przetwarzania plików Makefile
+Summary(pl.UTF-8):	Make - moduł do przetwarzania plików Makefile
 Name:		perl-Make
 Version:	1.00
 Release:	10
