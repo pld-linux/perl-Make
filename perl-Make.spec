@@ -7,7 +7,7 @@ Summary:	Make - module for processing makefiles
 Summary(pl.UTF-8):	Make - moduł do przetwarzania plików Makefile
 Name:		perl-Make
 Version:	1.00
-Release:	10
+Release:	11
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
