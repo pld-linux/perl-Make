@@ -1,7 +1,8 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
+
+%define		pdir	Make
 %include	/usr/lib/rpm/macros.perl
 Summary:	Make - module for processing makefiles
 Summary(pl.UTF-8):	Make - moduł do przetwarzania plików Makefile
@@ -13,6 +14,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Make/Make-%{version}.tar.gz
 # Source0-md5:	ee5233f89630451dd2c24e5e0d7d3336
+URL:		http://search.cpan.org/dist/Make/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
