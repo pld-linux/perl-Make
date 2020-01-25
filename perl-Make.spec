@@ -3,7 +3,6 @@
 %bcond_without	tests	# do not perform "make test"
 
 %define		pdir	Make
-%include	/usr/lib/rpm/macros.perl
 Summary:	Make - module for processing makefiles
 Summary(pl.UTF-8):	Make - moduł do przetwarzania plików Makefile
 Name:		perl-Make
